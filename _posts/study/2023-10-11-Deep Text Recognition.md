@@ -77,7 +77,7 @@ date: 2023-10-11
 - IC13과 IC15에서는 예시 번호의 격차가 IC03보다 더 크다.
 
 <div align="center">
-<img src="../../assets/images/2023-10-11-Deep Text Recognition/Table1.jpg" alt="Table_1" style="zoom:50%;"/><br>
+<img src="../../assets/images/2023-10-11-Deep Text Recognition/Table1.jpg" alt="Table_1" style="zoom:50%;"/><br><br>
 <img src="../../assets/images/2023-10-11-Deep Text Recognition/Fig2.jpg" alt="Figure_2" style="zoom:80%;"/>
 </div>
 
@@ -189,7 +189,7 @@ date: 2023-10-11
   - 메모리에 대해 특징 추출기가 가장 중요한 기여를 한다.
 
 <div align="center">
-<img src="../../assets/images/2023-10-11-Deep Text Recognition/Fig4.jpg" alt="Figure_4" style="zoom:50%;"/><br>
+<img src="../../assets/images/2023-10-11-Deep Text Recognition/Fig4.jpg" alt="Figure_4" style="zoom:50%;"/><br><br>
 <img src="../../assets/images/2023-10-11-Deep Text Recognition/Fig5.jpg" alt="Figure_5" style="zoom:70%;"/>
 </div>
 
