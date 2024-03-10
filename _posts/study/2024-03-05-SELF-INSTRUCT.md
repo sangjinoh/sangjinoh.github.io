@@ -29,8 +29,8 @@ date: 2024-03-05
    - 새로 생성된 지시 세트를 사용하여 지시 조정 감독을 위한 입력-출력 인스턴스를 생성한다.
    - 다양한 휴리스틱을 적용하여 저품질이거나 반복된 지시를 필터링하고, 유효한 작업을 작업 풀에 추가한다. 이 반복 과정은 많은 작업 수에 도달할 때까지 여러 번 반복된다.
 - 경험적 평가: vanilla LM인 GPT3에 SELF-INSTRUCT 프레임워크를 적용하여 약 52K의 지시와 82K의 인스턴스 입력 및 대상 출력을 생성한다. Fig 1의 예시에서 보여지듯이 생성된 데이터가 창의적인 작업의 다양한 범위를 제공한다.
-- 성능 비교: $GPT3_{SELF-INST}$ 는 기존 GPT3보다 크게 우수하며 $InstructGPT_{001}$과 비슷한 성능을 보인다.
-- 인간 평가 결과: $GPT3_{SELF-INST}$는 광범위한 지시 따르기 능력을 보여주며, 공개적으로 사용 가능한 다른 지시 데이터 세트에서 학습된 모델을 능가한다.
+- 성능 비교: $GPT3_{\text{SELF-INST}}$는 기존 GPT3보다 크게 우수하며 $InstructGPT_{001}$과 비슷한 성능을 보인다.
+- 인간 평가 결과: $GPT3_{\text{SELF-INST}}$는 광범위한 지시 따르기 능력을 보여주며, 공개적으로 사용 가능한 다른 지시 데이터 세트에서 학습된 모델을 능가한다.
 - 기여도 요약
    - (1) 최소한의 인간 레이블 데이터로 지시 따르기 능력을 유도하는 방법인 SELF-INSTRUCT를 소개한다.
    - (2) 광범위한 지시 조정 실험을 통해 효과를 입증한다.
@@ -67,7 +67,7 @@ date: 2024-03-05
    <details>
    <summary>Table 5 펼치기/접기</summary>
    <div align="center">
-   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table5.jpg" alt="Table_5" style="zoom:80%;"/>
+   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table5.jpg" alt="Table_5" style="zoom:100%;"/>
    </div>
    </details>
 
@@ -78,7 +78,7 @@ date: 2024-03-05
    <details>
    <summary>Table 6 펼치기/접기</summary>
    <div align="center">
-   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table6.jpg" alt="Table_6" style="zoom:80%;"/>
+   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table6.jpg" alt="Table_6" style="zoom:100%;"/>
    </div>
    </details>
 
@@ -89,7 +89,7 @@ date: 2024-03-05
    <details>
    <summary>Table 7 펼치기/접기</summary>
    <div align="center">
-   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table7.jpg" alt="Table_7" style="zoom:80%;"/>
+   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table7.jpg" alt="Table_7" style="zoom:100%;"/>
    </div>
    </details>
 
@@ -97,7 +97,7 @@ date: 2024-03-05
    <details>
    <summary>Table 8 펼치기/접기</summary>
    <div align="center">
-   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table8.jpg" alt="Table_8" style="zoom:80%;"/>
+   <img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table8.jpg" alt="Table_8" style="zoom:100%;"/>
    </div>
    </details>
    - 가능한 클래스 레이블을 먼저 생성한 후, 각 클래스 레이블에 조건을 달아 입력 생성을 진행한다.
@@ -164,8 +164,8 @@ date: 2024-03-05
 - 좋은 예시와 나쁜 예시: 좋은 예시와 나쁜 예시를 각각 Table 10과 11에서 나열한다.
 
 <div align="center">
-<img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table10.jpg" alt="Table_10" style="zoom:80%;"/><br><br>
-<img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table11.jpg" alt="Table_11" style="zoom:80%;"/>
+<img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table10.jpg" alt="Table_10" style="zoom:100%;"/><br><br>
+<img src="../../assets/images/2024-03-05-SELF-INSTRUCT/Table11.jpg" alt="Table_11" style="zoom:100%;"/>
 </div>
 
 ## 4 Experimental Results
@@ -173,8 +173,8 @@ date: 2024-03-05
 - 모델 및 기준선 설명: 실험에 사용된 모델과 기준선에 대한 설명 제공한다.
 - 실험 수행: 모델 성능 평가를 위한 실험을 수행한다.
 
-### 4.1 $GPT3_(SELF-INST)$: finetuning GPT3 on its own instruction data
-- $GPT3_(SELF-INST)$ 모델: 지시 생성된 데이터를 사용하여 GPT3 모델 자체("davinci" 엔진)를 미세 조정한다.
+### 4.1 $GPT3_{\text{SELF-INST}}$: finetuning GPT3 on its own instruction data
+- $GPT3_{\text{SELF-INST}}$모델: 지시 생성된 데이터를 사용하여 GPT3 모델 자체("davinci" 엔진)를 미세 조정한다.
 - 미세 조정 접근 방식: 다양한 템플릿을 사용하여 지시와 입력을 연결하고, 모델이 출력을 생성하도록 학습한다.
 - OpenAI 미세 조정 API 사용: 미세 조정은 OpenAI의 API를 통해 실행한다.
 - 하이퍼파라미터 설정: 기본 하이퍼파라미터를 사용하되 프롬프트 손실 가중치를 0으로 설정하고 2 에폭 동안 학습한다.
@@ -195,11 +195,11 @@ date: 2024-03-05
 - 제로샷 일반화 평가: SUPERNI 벤치마크에서 전형적인 NLP 작업에 대한 지시 따르기 능력을 제로샷 방식으로 평가한다.
 - GPT3 변형 사용: 결정론적 생성 모드(temperature as 0 and no nucleus
 sampling)를 사용하여 GPT3 변형에 대한 요청을 수행한다.
-- **Resutls**
+- **Results**
    - SELF-INSTRUCT의 효과: Table 3과 같이 GPT3의 지시 따르기 능력을 크게 향상한다.
    - 바닐라 GPT3 모델의 한계: 인간 지시를 따르지 못하며, 관련 없고 반복적인 텍스트를 생성한다.
-   - $GPT3_{SELF-INST}$와 다른 모델 비교: $GPT3_{SELF-INST}$가 T0 및 T0 학습 세트에 미세 조정된 GPT3보다 우수한 성능을 보인다.
-   - $InstructGPT_{001}$과의 성능 비교: $GPT3_{SELF-INST}$가 개인 사용자 데이터와 인간 주석된 레이블로 학습된 $InstructGPT_{001}$의 성능에 근접했다.
+   - $GPT3_{\text{SELF-INST}}$와 다른 모델 비교: $GPT3_{\text{SELF-INST}}$가 T0 및 T0 학습 세트에 미세 조정된 GPT3보다 우수한 성능을 보인다.
+   - $InstructGPT_{001}$과의 성능 비교: $GPT3_{\text{SELF-INST}}$가 개인 사용자 데이터와 인간 주석된 레이블로 학습된 $InstructGPT_{001}$의 성능에 근접했다.
 - SUPERNI 학습 세트의 추가 가치: SELF-INSTRUCT가 SUPERNI 학습 세트와 결합될 때 추가적인 이득을 제공, 보완적 데이터로서의 가치를 입증한다.
 
 <div align="center">
@@ -226,8 +226,8 @@ sampling)를 사용하여 GPT3 변형에 대한 요청을 수행한다.
       - RATING-D: 응답이 관련 없거나 완전히 무효임.
 - **Results.**
    - 결과 그림: Fig 6은 새로 작성된 지시 세트에서 GPT3 모델과 그 지시 조정된 동료들의 성능을 보여준다. 
-   - $GPT3_{SELF-INST}$의 성능: $GPT3_{SELF-INST}$가 T0 또는 SUPERNI 데이터에 학습된 모델들을 큰 폭으로 능가하며 생성된 데이터의 가치를 입증한다.
-   - InstructGPT와의 비교: $GPT3_{SELF-INST}$는 $InstructGPT_{001}$의 성능에 근접하며, $InstructGPT_{002}$와 $InstructGPT_{003}$의 인상적인 지시 따르기 능력을 확인한다.
+   - $GPT3_{\text{SELF-INST}}$의 성능: $GPT3_{\text{SELF-INST}}$가 T0 또는 SUPERNI 데이터에 학습된 모델들을 큰 폭으로 능가하며 생성된 데이터의 가치를 입증한다.
+   - InstructGPT와의 비교: $GPT3_{\text{SELF-INST}}$는 $InstructGPT_{001}$의 성능에 근접하며, $InstructGPT_{002}$와 $InstructGPT_{003}$의 인상적인 지시 따르기 능력을 확인한다.
    - 향후 연구 방향: 생성된 데이터의 품질을 개선하기 위해 인간 주석자 사용 또는 보상 모델 학습을 통한 더 나은 생성물 선택 가능성을 탐색한다.
 
 <details>
